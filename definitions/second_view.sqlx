@@ -1,6 +1,6 @@
 config { 
     type: "view",
-    dependencies : ["first"]
+    dependencies : ["first_123"]
     
 }
 

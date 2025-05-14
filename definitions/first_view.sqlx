@@ -10,7 +10,7 @@ config {
   columns: {
     test: "A description for the test column", // Column descriptions are pushed to BigQuery.
   },
-  name : "first"
+  name : "first_123"
 }
 
 -- The rest of a SQLX file contains your SELECT statement used to create the table.
