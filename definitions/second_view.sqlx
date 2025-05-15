@@ -1,5 +1,6 @@
 config { 
-    type: "view"
+    type: "view",
+    tags: ["demo_dataform"]
 }
 
 -- Use the ref() function to manage dependencies.
