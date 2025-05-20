@@ -1,10 +1,9 @@
 config { 
     type: "view",
-    tags: ["demo_dataform"]
+    tags: ["demo_dataform_test"]
 }
 
 -- Use the ref() function to manage dependencies.
 -- Learn more about ref() and other built in functions here: https://cloud.google.com/dataform/docs/dataform-core
 
-SELECT test from ${ref("first_view")}
-
+SELECT 1 from ${ref("second_view")}
