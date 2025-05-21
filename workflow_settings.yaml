@@ -6,4 +6,5 @@ dataformCoreVersion: 3.0.0
 vars:
     my_variable: ""
     EXTERNAL_DATASET: hub_dna_ext_dev
+    RAW_DATASET: hub_dna_bronze_dev
     gcs_uri: ""

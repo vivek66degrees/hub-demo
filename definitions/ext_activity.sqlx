@@ -13,10 +13,76 @@ config {
 }
 
 CREATE OR REPLACE EXTERNAL TABLE ${self()} 
+(
+  UniqActivity STRING,
+  UniqActivityMaster STRING,
+  AssociatedItemCode STRING,
+  UniqAssociatedItem STRING,
+  GeneratingEventCode STRING,
+  UniqGeneratingEvent STRING,
+  UniqEntity STRING,
+  UniqEntityContact STRING,
+  EntKey STRING,
+  UniqAgency STRING,
+  UniqBranch STRING,
+  UniqDepartment STRING,
+  UniqProfitCenter STRING,
+  UniqActivityCode STRING,
+  DescriptionOf STRING,
+  UniqActivityEvent STRING,
+  PriorityCode STRING,
+  UniqEmployee STRING,
+  FollowUpStartDate STRING,
+  FollowUpStartTime STRING,
+  FollowUpEndDate STRING,
+  FollowUpEndTime STRING,
+  ReminderDate STRING,
+  ReminderTime STRING,
+  UniqEntityCompanyIssuing STRING,
+  UniqEntityCompanyBilling STRING,
+  UniqContactName STRING,
+  ContactName STRING,
+  ContactVia STRING,
+  ContactPhone STRING,
+  ContactEmail STRING,
+  ClosedStatus STRING,
+  LkActivityUnsuccessfulReason STRING,
+  ActualTimeHours STRING,
+  ActualTimeMinutes STRING,
+  ActualCost STRING,
+  DurationDays STRING,
+  ProcessingCode STRING,
+  PriorProcessingCode STRING,
+  ProcessFailureNumber STRING,
+  ClosedByCode STRING,
+  ClosedDate STRING,
+  InsertedByCode STRING,
+  InsertedDate STRING,
+  UpdatedByCode STRING,
+  UpdatedDate STRING,
+  ReopenedByCode STRING,
+  ReopenedDate STRING,
+  Flags STRING,
+  UniqEntityBrokerBilling STRING,
+  PremiumPayableCode STRING,
+  ContactPhoneCountryCode STRING,
+  UpdatedByProcess STRING,
+  InsertedByProcess STRING,
+  Amount STRING,
+  AmountQualifier STRING,
+  MigratedByCode STRING,
+  MigratedDate STRING,
+  UniqWorkGroup STRING
+)
 OPTIONS (
   format = "PARQUET",
   uris = ["${dataform.projectConfig.vars.gcs_uri}/*.parquet"]
 );
+
+TRUNCATE TABLE ${dataform.projectConfig.vars.RAW_DATASET}.raw_activity;
+
+
+
 
 -- The rest of a SQLX file contains your SELECT statement used to create the table.
 
