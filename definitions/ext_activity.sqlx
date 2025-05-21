@@ -4,15 +4,27 @@
 -- You can delete this file, then commit and push your changes to your repository when you are ready.
 
 -- Config blocks allow you to configure, document, and test your data assets.
+
 config {
-  type: "operations", // Creates a view in BigQuery. Try changing to "table" instead.
-  tags: ["first_view_tag","all"]
+  type: "operations",
+  tags: ["dim_activity"],
+  schema: dataform.projectConfig.vars.EXTERNAL_DATASET,
+  hasOutput: true
 }
 
 -- The rest of a SQLX file contains your SELECT statement used to create the table.
 
-CREATE OR REPLACE TABLE hub-interndev-env-20250516.hub_dna_ext_dev.${dataform.projectConfig.vars.my_variable}
-AS SELECT 1 AS TEST;
+-- CREATE OR REPLACE TABLE hub-interndev-env-20250516.hub_dna_ext_dev.${dataform.projectConfig.vars.my_variable}
+-- AS SELECT 1 AS TEST;
 
 
 -- SELECT 1 as test , "${dataform.projectConfig.vars.my_variable}" as passed_value
+
+
+
+
+CREATE OR REPLACE EXTERNAL TABLE ${self()} 
+OPTIONS (
+  format = "PARQUET",
+  uris = ["${dataform.projectConfig.vars.EXTERNAL_GCS_BUCKET}/*.parquet"]
+);
