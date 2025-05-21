@@ -7,4 +7,4 @@ vars:
     my_variable: ""
     EXTERNAL_DATASET: hub_dna_ext_dev
     RAW_DATASET: hub_dna_bronze_dev
-    gcs_uri: ""
+    gcs_uri: "gs://hud-dna-datalake/epic_ca/Activity/2025/05/19"
