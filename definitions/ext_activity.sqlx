@@ -12,7 +12,7 @@ config {
   hasOutput: true
 }
 
-CREATE OR REPLACE EXTERNAL TABLE ${self()} 
+CREATE OR REPLACE EXTERNAL TABLE ${dataform.projectConfig.vars.EXTERNAL_DATASET}.ext_activity
 (
   UniqActivity STRING,
   UniqActivityMaster STRING,
@@ -142,7 +142,7 @@ cast(AmountQualifier as STRING ) ,
 cast(MigratedByCode as STRING ) ,
 cast(MigratedDate as STRING ) ,
 cast(UniqWorkGroup as INTEGER )
-FROM ${self()};
+FROM ${dataform.projectConfig.vars.EXTERNAL_DATASET}.ext_activity;
 
 
 
