@@ -12,6 +12,12 @@ config {
   hasOutput: true
 }
 
+CREATE OR REPLACE EXTERNAL TABLE ${self()} 
+OPTIONS (
+  format = "PARQUET",
+  uris = ["${dataform.projectConfig.vars.gcs_uri}/*.parquet"]
+);
+
 -- The rest of a SQLX file contains your SELECT statement used to create the table.
 
 -- CREATE OR REPLACE TABLE hub-interndev-env-20250516.hub_dna_ext_dev.${dataform.projectConfig.vars.my_variable}
@@ -19,12 +25,3 @@ config {
 
 
 -- SELECT 1 as test , "${dataform.projectConfig.vars.my_variable}" as passed_value
-
-
-
-
-CREATE OR REPLACE EXTERNAL TABLE ${self()} 
-OPTIONS (
-  format = "PARQUET",
-  uris = ["${dataform.projectConfig.vars.EXTERNAL_GCS_BUCKET}/*.parquet"]
-);
