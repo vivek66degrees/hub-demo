@@ -1,4 +1,4 @@
-defaultProject: sbox-ujjal-ci-cd-capabilities
+defaultProject: hub-interndev-env-20250516
 defaultLocation: US
 defaultDataset: dataform
 defaultAssertionDataset: dataform_assertions
