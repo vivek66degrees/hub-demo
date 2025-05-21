@@ -5,14 +5,14 @@
 
 -- Config blocks allow you to configure, document, and test your data assets.
 config {
-  type: "view", // Creates a view in BigQuery. Try changing to "table" instead.
-  tags: ["first_view_tag","all"],
-  columns: {
-    test: "A description for the test column", // Column descriptions are pushed to BigQuery.
-  }
- 
+  type: "operations", // Creates a view in BigQuery. Try changing to "table" instead.
+  tags: ["first_view_tag","all"]
 }
 
 -- The rest of a SQLX file contains your SELECT statement used to create the table.
 
-SELECT 1 as test , "${dataform.projectConfig.vars.my_variable}" as passed_value
+CREATE OR REPLACE TABLE hub-interndev-env-20250516.hub_dna_ext_dev.${dataform.projectConfig.vars.my_variable}
+AS SELECT 1 AS TEST;
+
+
+-- SELECT 1 as test , "${dataform.projectConfig.vars.my_variable}" as passed_value
