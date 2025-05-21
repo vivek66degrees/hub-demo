@@ -4,4 +4,4 @@ defaultDataset: dataform
 defaultAssertionDataset: dataform_assertions
 dataformCoreVersion: 3.0.0
 vars:
-    "my_variable" : "dummy"
+    "my_variable": "dummy"

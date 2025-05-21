@@ -15,4 +15,4 @@ config {
 
 -- The rest of a SQLX file contains your SELECT statement used to create the table.
 
-SELECT 1 as test , "{{ var('my_variable') }}" as passed_value
+SELECT 1 as test , "${dataform.projectConfig.vars.my_variable}" as passed_value
