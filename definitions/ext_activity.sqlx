@@ -7,7 +7,7 @@
 
 config {
   type: "operations",
-  tags: ["dim_activity"],
+  tags: ["ext_activity"],
   schema: dataform.projectConfig.vars.EXTERNAL_DATASET,
   hasOutput: true
 }
