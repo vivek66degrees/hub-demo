@@ -1,0 +1,6 @@
+config {
+  type: "declaration",
+  database: "hub-interndev-env-20250516",    // Replace with your actual GCP Project ID
+  schema: "hub_dna_bronze_dev",                // Replace with your actual BigQuery dataset name where raw_table exists
+  name: "raw_activity"                  // The exact name of the table in BigQuery
+}
