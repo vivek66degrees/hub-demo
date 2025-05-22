@@ -1,0 +1,12 @@
+config {
+  type: "operations",
+  tags: ["ext_agency"],
+  schema: dataform.projectConfig.vars.EXTERNAL_DATASET,
+  hasOutput: true
+}
+
+CREATE OR REPLACE EXTERNAL TABLE ${dataform.projectConfig.vars.EXTERNAL_DATASET}.ext_agency
+OPTIONS (
+  format = "PARQUET",
+  uris = ["${dataform.projectConfig.vars.gcs_uri}/*.parquet"]
+);
