@@ -1,0 +1,10 @@
+config {
+  type: "operations",
+  tags: ["dummy"],
+  schema: dataform.projectConfig.vars.EXTERNAL_DATASET,
+  hasOutput: true
+}
+
+CREATE OR REPLACE TABLE ${self()}
+as
+select * from ${ref("raw_activity")};
