@@ -1,10 +1,11 @@
 config {
-  type: "operations",
+  type: "table",
   tags: ["dummy"],
-  schema: dataform.projectConfig.vars.EXTERNAL_DATASET,
-  hasOutput: true
+  schema: dataform.projectConfig.vars.EXTERNAL_DATASET
 }
 
-CREATE OR REPLACE TABLE ${self()}
-as
-select * from ${ref("raw_activity")};
+select 1 from ${ref("Raw_act_log_plan_assoc")}
+union all
+select 1 from ${ref("Raw_act_log")}
+union all
+select 1 from ${ref("raw_activity")}
