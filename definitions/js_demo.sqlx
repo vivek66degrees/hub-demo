@@ -1,6 +1,6 @@
-  config {
-      type: "table",
-      disabled: true
-  }
+config {
+    type: "table",
+    disabled: true
+}
 
-  ${functions.external_table("ext_activity","hub_dna_ext_dev","gs://hud-dna-datalake/epic_ca/Activity/2025/03-20/ 2025-03-20 00:05:14Z162/*.parquet")}
+${functions.external_table("ext_activity", "hub_dna_ext_dev", "gs://hud-dna-datalake/epic_ca/Activity/2025/03-20/ 2025-03-20 00:05:14Z162/*.parquet")}
