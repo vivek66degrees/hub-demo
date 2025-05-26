@@ -3,4 +3,7 @@ config {
     tags: ["ext_activity_js"]
 }
 
-${functions.external_table(dataform.projectConfig.vars.table,dataform.projectConfig.vars.EXTERNAL_DATASET,dataform.projectConfig.vars.gcs_uri)}
+${functions.external_table(
+    dataform.projectConfig.vars.table,
+    dataform.projectConfig.vars.EXTERNAL_DATASET,
+    dataform.projectConfig.vars.gcs_uri)}
