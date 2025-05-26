@@ -1,6 +1,10 @@
 config {
-    type: "table",
+    type: "operations",
     disabled: true
 }
 
-${functions.external_table("ext_activity", "hub_dna_ext_dev", "gs://hud-dna-datalake/epic_ca/Activity/2025/03-20/ 2025-03-20 00:05:14Z162/*.parquet")}
+-- js {
+--   const { external_table } = require("definitions/functions");
+-- }
+
+${functions.external_table("ext_activity", "hub_dna_ext_dev", "gs://hud-dna-datalake/epic_ca/Activity/2025/03-20/ 2025-03-20 00:05:14Z162")}
