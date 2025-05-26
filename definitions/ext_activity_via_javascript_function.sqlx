@@ -1,5 +1,8 @@
 config {
-    type: "operations"
+    type: "operations",
+    tags: ["external_table_js"]
 }
 
-${functions.external_table("ext_activity", "hub_dna_ext_dev", "gs://hud-dna-datalake/epic_ca/Activity/2025/03-20/ 2025-03-20 00:05:14Z162")}
+const { table, EXTERNAL_DATASET, gcs_uri } = dataform.projectConfig.vars;
+
+${functions.external_table(dataform.projectConfig.vars.table,dataform.projectConfig.vars.EXTERNAL_DATASET,dataform.projectConfig.vars.gcs_uri)}
