@@ -1,6 +1,6 @@
 config {
   type: "operations",
-  tags: ["ext_agency"],
+  tags: ["ext_agency_js"],
   schema: dataform.projectConfig.vars.EXTERNAL_DATASET,
   hasOutput: true
 }
