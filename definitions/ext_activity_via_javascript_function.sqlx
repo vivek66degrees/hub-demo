@@ -3,6 +3,4 @@ config {
     tags: ["external_table_js"]
 }
 
-const { table, EXTERNAL_DATASET, gcs_uri } = dataform.projectConfig.vars;
-
 ${functions.external_table(dataform.projectConfig.vars.table,dataform.projectConfig.vars.EXTERNAL_DATASET,dataform.projectConfig.vars.gcs_uri)}
