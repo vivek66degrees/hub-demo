@@ -1,6 +1,6 @@
 config {
     type: "table",
-    tags: ["load_ext_to_raw_activity"],
+    tags: ["load_ext_to_raw"],
     name : dataform.projectConfig.vars.raw_suffix+dataform.projectConfig.vars.table,
     schema: dataform.projectConfig.vars.RAW_DATASET
 }
