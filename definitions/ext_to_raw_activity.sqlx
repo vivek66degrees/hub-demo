@@ -1,0 +1,13 @@
+config {
+    type: "table",
+    tags: ["ext_activity_js"],
+    name : "raw_activity_1",
+    schema: dataform.projectConfig.vars.RAW_DATASET
+}
+
+select 1 ;
+
+-- ${functions.external_table(
+--     dataform.projectConfig.vars.table,
+--     dataform.projectConfig.vars.EXTERNAL_DATASET,
+--     dataform.projectConfig.vars.gcs_uri)}
