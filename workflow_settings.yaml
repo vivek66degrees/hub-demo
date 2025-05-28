@@ -8,4 +8,4 @@ vars:
     EXTERNAL_DATASET: hub_dna_ext_dev
     RAW_DATASET: hub_dna_bronze_dev
     SILVER_DATASET: hub_dna_silver_dev
-    gcs_uri: ""
+    gcs_uri: "gs://hud-dna-datalake/epic_ca/Activity/2025/03-20/ 2025-03-20 00:05:14Z162"

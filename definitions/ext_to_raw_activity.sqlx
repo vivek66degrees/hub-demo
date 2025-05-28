@@ -5,9 +5,16 @@ config {
     schema: dataform.projectConfig.vars.RAW_DATASET
 }
 
-select 1 ;
+pre_operations {
+    ${functions.external_table(
+      dataform.projectConfig.vars.table,
+      dataform.projectConfig.vars.EXTERNAL_DATASET,
+      dataform.projectConfig.vars.gcs_uri
+    )}
+}
 
--- ${functions.external_table(
---     dataform.projectConfig.vars.table,
---     dataform.projectConfig.vars.EXTERNAL_DATASET,
---     dataform.projectConfig.vars.gcs_uri)}
+select *
+from ${dataform.projectConfig.vars.EXTERNAL_DATASET}.${dataform.projectConfig.vars.table}
+
+
+
