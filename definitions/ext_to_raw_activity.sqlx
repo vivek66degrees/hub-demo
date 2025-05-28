@@ -1,7 +1,7 @@
 config {
     type: "table",
-    tags: ["ext_activity_js"],
-    name : dataform.projectConfig.vars.table,
+    tags: ["load_ext_to_raw_activity"],
+    name : dataform.projectConfig.vars.raw_suffix+dataform.projectConfig.vars.table,
     schema: dataform.projectConfig.vars.RAW_DATASET
 }
 
@@ -14,7 +14,7 @@ pre_operations {
 }
 
 select *
-from ${dataform.projectConfig.vars.EXTERNAL_DATASET}.${dataform.projectConfig.vars.table}
+from ${dataform.projectConfig.vars.EXTERNAL_DATASET}.ext_${dataform.projectConfig.vars.table}
 
 
 
