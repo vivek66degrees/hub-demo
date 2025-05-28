@@ -1,7 +1,7 @@
 config {
     type: "table",
     tags: ["ext_activity_js"],
-    name : "raw_activity_1",
+    name : dataform.projectConfig.vars.table,
     schema: dataform.projectConfig.vars.RAW_DATASET
 }
 
