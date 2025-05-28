@@ -4,9 +4,9 @@ defaultDataset: dataform
 defaultAssertionDataset: dataform_assertions
 dataformCoreVersion: 3.0.0
 vars:
-    table: "activity"
+    table: "agency"
     EXTERNAL_DATASET: hub_dna_ext_dev
     RAW_DATASET: hub_dna_bronze_dev
     SILVER_DATASET: hub_dna_silver_dev
-    gcs_uri: "gs://hud-dna-datalake/epic_ca/Activity/2025/03-20/ 2025-03-20 00:05:14Z162"
+    gcs_uri: "gs://hud-dna-datalake/epic_ca/Agency/2025/03-20/2025-03-20 00:05:14Z162"
     raw_suffix : "raw_"
