@@ -1,6 +1,6 @@
 config {
     type: "operations",
-    tags: ["ext_activity_js"]
+    tags: ["ext_activity_js_1"]
 }
 
 ${functions.external_table(
